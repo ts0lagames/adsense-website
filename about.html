@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about MyBlog, our mission, values, and the team behind quality content creation.">
+    <meta name="keywords" content="about, blog author, team, mission, values">
+    <meta name="author" content="Your Name">
+    <meta property="og:title" content="About - MyBlog">
+    <meta property="og:description" content="Learn more about MyBlog and our mission">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630">
+    <meta property="og:url" content="https://yourblog.com/about">
+    <link rel="canonical" href="https://yourblog.com/about">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <title>About - MyBlog</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About MyBlog",
+        "url": "https://yourblog.com/about",
+        "description": "Learn about MyBlog and our mission to provide quality content"
+    }
+    </script>
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .about-hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .about-hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+
+        .about-section {
+            margin-bottom: 4rem;
+            background-color: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 1rem;
+        }
+
+        .about-section p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .founder-section {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .founder-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .founder-info h4 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .founder-title {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .founder-bio {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-profiles {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-profiles a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .social-profiles a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .mission-statement {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            padding: 2rem;
+            border-left: 5px solid var(--primary-color);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .mission-statement blockquote {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .value-card {
+            background-color: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .value-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .achievement-card {
+            background-color: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid var(--primary-color);
+        }
+
+        .achievement-number {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-label {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+            margin: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            padding-left: 100px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 5px;
+            width: 25px;
+            height: 25px;
+            background-color: var(--primary-color);
+            border: 4px solid var(--bg-white);
+            border-radius: 50%;
+        }
+
+        .timeline-year {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-event {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background-color: var(--bg-light);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .team-member-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .team-member-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-member-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member-role {
+            color: var(--text-light);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-member-bio {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .team-member-social {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .team-member-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .team-member-social a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-box h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: white;
+            border: none;
+            padding: 0;
+        }
+
+        .cta-box p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-box a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-box a:hover {
+            background-color: #d97706;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-hero h2 {
+                font-size: 2rem;
+            }
+
+            .founder-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .founder-image {
+                width: 100%;
+                height: 300px;
+            }
+
+            .values-grid,
+            .achievements,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 15px;
+            }
+
+            .timeline-item {
+                padding-left: 60px;
+            }
+
+            .timeline-item::before {
+                left: 5px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-hero {
+                padding: 3rem 0;
+            }
+
+            .about-hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-container {
+                padding: 0 15px;
+            }
+
+            .about-section {
+                padding: 1.5rem;
+            }
+
+            .about-section h3 {
+                font-size: 1.5rem;
+            }
+
+            .cta-box {
+                padding: 2rem 1rem;
+            }
+
+            .cta-box h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <h1>📰 MyBlog</h1>
+                </div>
+                <nav class="nav" id="nav">
+                    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="index.html#blog" class="nav-link">Blog</a></li>
+                        <li><a href="about.html" class="nav-link active">About</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="theme-toggle">
+                    <button id="theme-btn" aria-label="Toggle dark mode">🌙</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h2>About MyBlog</h2>
+            <p>Quality content, authentic stories, and valuable insights</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="about-container">
+
+            <!-- Mission & Vision -->
+            <section class="about-section">
+                <h3>Our Mission</h3>
+                <div class="mission-statement">
+                    <blockquote>
+                        "To empower readers with quality, authentic, and valuable content that inspires growth, sparks innovation, and makes a positive impact on their lives."
+                    </blockquote>
+                </div>
+                <p>
+                    MyBlog was founded with a simple yet powerful mission: to create a space where quality content meets genuine connection. We believe that in an era of information overload, what people truly need is curated, thoughtful, and authentic storytelling that adds real value to their lives.
+                </p>
+                <p>
+                    Whether you're here to learn about the latest technology trends, discover lifestyle tips, explore travel destinations, or gain personal insights, we're committed to providing content that inspires, educates, and entertains.
+                </p>
+            </section>
+
+            <!-- Core Values -->
+            <section class="about-section">
+                <h3>Our Core Values</h3>
+                <p>Everything we do is guided by these core principles:</p>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">✨</div>
+                        <h4>Quality First</h4>
+                        <p>We never compromise on quality. Every article is thoroughly researched and carefully crafted to provide real value.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🎯</div>
+                        <h4>Authenticity</h4>
+                        <p>We share genuine stories, real experiences, and honest perspectives. No fluff, just substance.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🚀</div>
+                        <h4>Innovation</h4>
+                        <p>We stay ahead of trends, explore new topics, and constantly evolve to serve you better.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">💡</div>
+                        <h4>Education</h4>
+                        <p>Learning is a lifelong journey. We're here to help you grow and expand your knowledge.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h4>Community</h4>
+                        <p>We believe in the power of community. Your feedback and engagement matter deeply to us.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🌱</div>
+                        <h4>Growth</h4>
+                        <p>Personal and professional growth drives everything we do. We're committed to your success.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Founder Section -->
+            <section class="about-section">
+                <h3>Meet the Founder</h3>
+                <div class="founder-section">
+                    <img src="https://via.placeholder.com/300" alt="John Smith - Founder" class="founder-image">
+                    <div class="founder-info">
+                        <h4>John Smith</h4>
+                        <p class="founder-title">Founder & Chief Editor</p>
+                        <p class="founder-bio">
+                            John is a passionate content creator with over 10 years of experience in digital marketing and content strategy. With a background in technology and a passion for storytelling, he founded MyBlog to create a platform where quality content meets authentic connection.
+                        </p>
+                        <p class="founder-bio">
+                            When he's not writing or managing the blog, John enjoys traveling, exploring new coffee shops, and contributing to open-source projects. He's a firm believer that great content has the power to change lives.
+                        </p>
+                        <div class="social-profiles">
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">𝕏</a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">in</a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub">⚙️</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements -->
+            <section class="about-section">
+                <h3>Milestones & Achievements</h3>
+                <div class="achievements">
+                    <div class="achievement-card">
+                        <div class="achievement-number">50K+</div>
+                        <div class="achievement-label">Monthly Readers</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-number">500+</div>
+                        <div class="achievement-label">Published Articles</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-number">100K+</div>
+                        <div class="achievement-label">Newsletter Subscribers</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-number">30+</div>
+                        <div class="achievement-label">Countries Reached</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Timeline -->
+            <section class="about-section">
+                <h3>Our Journey</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2019</div>
+                        <div class="timeline-event">MyBlog was founded with a mission to create quality content for curious minds.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-event">Reached our first 10,000 monthly readers. Launched our newsletter program.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-event">Expanded to 6 different content categories. Hit 100,000 total reads milestone.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-event">Introduced podcast series. Reached 50K monthly active readers.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-event">Launched guest writer program. Published 500th article.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-event">Expanded internationally. Reached readers in 30+ countries.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-event">Introduced AI-assisted content tools. Growing community to 200K+ subscribers.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2026</div>
+                        <div class="timeline-event">Continuing to innovate and bring value to our loyal readers worldwide.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team -->
+            <section class="about-section">
+                <h3>Our Team</h3>
+                <p>Meet the talented people behind MyBlog:</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/250" alt="Sarah Johnson" class="team-member-image">
+                        <div class="team-member-info">
+                            <div class="team-member-name">Sarah Johnson</div>
+                            <div class="team-member-role">Senior Writer</div>
+                            <div class="team-member-bio">
+                                Passionate about technology and innovation. Sarah brings 8 years of tech journalism experience to our team.
+                            </div>
+                            <div class="team-member-social">
+                                <a href="#" title="Twitter">𝕏</a>
+                                <a href="#" title="LinkedIn">in</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/250" alt="Michael Chen" class="team-member-image">
+                        <div class="team-member-info">
+                            <div class="team-member-name">Michael Chen</div>
+                            <div class="team-member-role">Content Strategist</div>
+                            <div class="team-member-bio">
+                                Strategic thinker with expertise in content marketing. Michael ensures our content drives real impact.
+                            </div>
+                            <div class="team-member-social">
+                                <a href="#" title="Twitter">𝕏</a>
+                                <a href="#" title="LinkedIn">in</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/250" alt="Emma Williams" class="team-member-image">
+                        <div class="team-member-info">
+                            <div class="team-member-name">Emma Williams</div>
+                            <div class="team-member-role">Lifestyle Editor</div>
+                            <div class="team-member-bio">
+                                Lifestyle enthusiast with a keen eye for trends. Emma curates our lifestyle and wellness content.
+                            </div>
+                            <div class="team-member-social">
+                                <a href="#" title="Twitter">𝕏</a>
+                                <a href="#" title="Instagram">📷</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/250" alt="David Martinez" class="team-member-image">
+                        <div class="team-member-info">
+                            <div class="team-member-name">David Martinez</div>
+                            <div class="team-member-role">SEO & Analytics</div>
+                            <div class="team-member-bio">
+                                Data-driven professional ensuring our content reaches the right audience at the right time.
+                            </div>
+                            <div class="team-member-social">
+                                <a href="#" title="LinkedIn">in</a>
+                                <a href="#" title="GitHub">⚙️</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Read MyBlog -->
+            <section class="about-section">
+                <h3>Why Read MyBlog?</h3>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">📚</div>
+                        <h4>Expert Insights</h4>
+                        <p>Our writers are industry experts with years of practical experience and proven track records.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🔍</div>
+                        <h4>Thoroughly Researched</h4>
+                        <p>Every article is backed by research, facts, and real-world examples for maximum credibility.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">⏰</div>
+                        <h4>Consistent Updates</h4>
+                        <p>Fresh content published regularly to keep you informed on the latest trends and insights.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">📱</div>
+                        <h4>Easy to Read</h4>
+                        <p>Clean design, mobile-friendly format, and scannable content for optimal reading experience.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">💬</div>
+                        <h4>Community Engaged</h4>
+                        <p>Be part of an active community where ideas are shared and discussions are welcomed.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🎁</div>
+                        <h4>Value-Driven</h4>
+                        <p>Every article is created with the goal of providing real value and actionable insights.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Box -->
+            <div class="cta-box">
+                <h3>Ready to Join Our Community?</h3>
+                <p>Subscribe to our newsletter and get the latest articles delivered to your inbox.</p>
+                <a href="index.html#newsletter">Subscribe Now</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>About</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Advertise</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Follow Us</h5>
+                    <ul class="social-links">
+                        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyBlog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Theme toggle
+        const themeBtn = document.getElementById('theme-btn');
+        const navToggle = document.getElementById('nav-toggle');
+        const navList = document.querySelector('.nav-list');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Initialize theme
+        function initializeTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeBtn.textContent = '☀️';
+            }
+        }
+
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            themeBtn.textContent = isDarkMode ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        });
+
+        // Mobile menu toggle
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navList.classList.remove('active');
+            });
+        });
+
+        initializeTheme();
+    </script>
+</body>
+</html>
